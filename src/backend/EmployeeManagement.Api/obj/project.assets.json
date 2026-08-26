@@ -1,0 +1,227 @@
+{
+  "version": 4,
+  "targets": {
+    "net9.0": {
+      "Microsoft.AspNetCore.OpenApi/9.0.19": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.OpenApi": "1.6.17"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Microsoft.OpenApi/1.6.17": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "EmployeeManagement.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "EmployeeManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EmployeeManagement.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EmployeeManagement.Application.dll": {}
+        }
+      },
+      "EmployeeManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/EmployeeManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EmployeeManagement.Domain.dll": {}
+        }
+      },
+      "EmployeeManagement.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "EmployeeManagement.Application": "1.0.0",
+          "EmployeeManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EmployeeManagement.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EmployeeManagement.Infrastructure.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.AspNetCore.OpenApi/9.0.19": {
+      "sha512": "WJakL+63fw/fioAdPpxebeVFPfd+kkWfz4213tbTRBywddqkeW/OqHZjDSOLUUYAvncRx6ktXAWMQbVbh+YR4g==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.openapi/9.0.19",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll",
+        "lib/net9.0/Microsoft.AspNetCore.OpenApi.xml",
+        "microsoft.aspnetcore.openapi.9.0.19.nupkg.sha512",
+        "microsoft.aspnetcore.openapi.nuspec"
+      ]
+    },
+    "Microsoft.OpenApi/1.6.17": {
+      "sha512": "Le+kehlmrlQfuDFUt1zZ2dVwrhFQtKREdKBo+rexOwaCoYP0/qpgT9tLxCsZjsgR5Itk1UKPcbgO+FyaNid/bA==",
+      "type": "package",
+      "path": "microsoft.openapi/1.6.17",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/netstandard2.0/Microsoft.OpenApi.dll",
+        "lib/netstandard2.0/Microsoft.OpenApi.pdb",
+        "lib/netstandard2.0/Microsoft.OpenApi.xml",
+        "microsoft.openapi.1.6.17.nupkg.sha512",
+        "microsoft.openapi.nuspec"
+      ]
+    },
+    "EmployeeManagement.Application/1.0.0": {
+      "type": "project",
+      "path": "../EmployeeManagement.Application/EmployeeManagement.Application.csproj",
+      "msbuildProject": "../EmployeeManagement.Application/EmployeeManagement.Application.csproj"
+    },
+    "EmployeeManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../EmployeeManagement.Domain/EmployeeManagement.Domain.csproj",
+      "msbuildProject": "../EmployeeManagement.Domain/EmployeeManagement.Domain.csproj"
+    },
+    "EmployeeManagement.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../EmployeeManagement.Infrastructure/EmployeeManagement.Infrastructure.csproj",
+      "msbuildProject": "../EmployeeManagement.Infrastructure/EmployeeManagement.Infrastructure.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0": [
+      "EmployeeManagement.Application >= 1.0.0",
+      "EmployeeManagement.Infrastructure >= 1.0.0",
+      "Microsoft.AspNetCore.OpenApi >= 9.0.19"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\santoshchougule\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Api\\EmployeeManagement.Api.csproj",
+      "projectName": "EmployeeManagement.Api",
+      "projectPath": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Api\\EmployeeManagement.Api.csproj",
+      "packagesPath": "C:\\Users\\santoshchougule\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Api\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\santoshchougule\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://rcsi.pkgs.visualstudio.com/_packaging/RCSI_CRM_PORTAL_NUGET/nuget/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0": {
+          "framework": "net9.0",
+          "targetAlias": "net9.0",
+          "projectReferences": {
+            "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Application\\EmployeeManagement.Application.csproj": {
+              "projectPath": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Application\\EmployeeManagement.Application.csproj"
+            },
+            "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Infrastructure\\EmployeeManagement.Infrastructure.csproj": {
+              "projectPath": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Infrastructure\\EmployeeManagement.Infrastructure.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "10.0.400"
+    },
+    "frameworks": {
+      "net9.0": {
+        "framework": "net9.0",
+        "targetAlias": "net9.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.OpenApi": {
+            "target": "Package",
+            "version": "[9.0.19, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://rcsi.pkgs.visualstudio.com/_packaging/RCSI_CRM_PORTAL_NUGET/nuget/v3/index.json."
+    }
+  ]
+}

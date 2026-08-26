@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/backend/">
+    <Project Path="src/backend/EmployeeManagement.Api/EmployeeManagement.Api.csproj" />
+    <Project Path="src/backend/EmployeeManagement.Application/EmployeeManagement.Application.csproj" />
+    <Project Path="src/backend/EmployeeManagement.Domain/EmployeeManagement.Domain.csproj" />
+    <Project Path="src/backend/EmployeeManagement.Infrastructure/EmployeeManagement.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/EmployeeManagement.IntegrationTests/EmployeeManagement.IntegrationTests.csproj" />
+    <Project Path="tests/EmployeeManagement.UnitTests/EmployeeManagement.UnitTests.csproj" />
+  </Folder>
+</Solution>
