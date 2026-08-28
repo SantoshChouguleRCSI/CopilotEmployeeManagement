@@ -9,3 +9,4 @@ C:\Projects\CopilotEmployeeManagement\src\backend\EmployeeManagement.Domain\obj\
 C:\Projects\CopilotEmployeeManagement\src\backend\EmployeeManagement.Domain\obj\Debug\net9.0\refint\EmployeeManagement.Domain.dll
 C:\Projects\CopilotEmployeeManagement\src\backend\EmployeeManagement.Domain\obj\Debug\net9.0\EmployeeManagement.Domain.pdb
 C:\Projects\CopilotEmployeeManagement\src\backend\EmployeeManagement.Domain\obj\Debug\net9.0\ref\EmployeeManagement.Domain.dll
+C:\Projects\CopilotEmployeeManagement\src\backend\EmployeeManagement.Domain\obj\Debug\net9.0\EmployeeManagement.Domain.sourcelink.json

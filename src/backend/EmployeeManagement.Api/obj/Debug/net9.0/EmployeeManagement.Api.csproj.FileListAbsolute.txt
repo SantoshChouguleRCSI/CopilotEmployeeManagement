@@ -168,3 +168,4 @@ C:\Projects\CopilotEmployeeManagement\src\backend\EmployeeManagement.Api\bin\Deb
 C:\Projects\CopilotEmployeeManagement\src\backend\EmployeeManagement.Api\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Projects\CopilotEmployeeManagement\src\backend\EmployeeManagement.Api\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Projects\CopilotEmployeeManagement\src\backend\EmployeeManagement.Api\bin\Debug\net9.0\Scalar.AspNetCore.dll
+C:\Projects\CopilotEmployeeManagement\src\backend\EmployeeManagement.Api\obj\Debug\net9.0\EmployeeManagement.Api.sourcelink.json

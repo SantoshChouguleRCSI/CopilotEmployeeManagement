@@ -1,6 +1,7 @@
 ---
 name: Backend Developer
 description: Implements .NET backend features following the repository architecture.
+tools: [execute, read, edit, search, todo]
 ---
 
 # Backend Developer

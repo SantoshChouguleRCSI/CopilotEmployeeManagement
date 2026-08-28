@@ -13,3 +13,4 @@ C:\Projects\CopilotEmployeeManagement\src\backend\EmployeeManagement.Application
 C:\Projects\CopilotEmployeeManagement\src\backend\EmployeeManagement.Application\obj\Debug\net9.0\refint\EmployeeManagement.Application.dll
 C:\Projects\CopilotEmployeeManagement\src\backend\EmployeeManagement.Application\obj\Debug\net9.0\EmployeeManagement.Application.pdb
 C:\Projects\CopilotEmployeeManagement\src\backend\EmployeeManagement.Application\obj\Debug\net9.0\ref\EmployeeManagement.Application.dll
+C:\Projects\CopilotEmployeeManagement\src\backend\EmployeeManagement.Application\obj\Debug\net9.0\EmployeeManagement.Application.sourcelink.json

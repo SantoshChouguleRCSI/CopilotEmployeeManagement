@@ -103,3 +103,4 @@ C:\Projects\CopilotEmployeeManagement\tests\EmployeeManagement.UnitTests\obj\Deb
 C:\Projects\CopilotEmployeeManagement\tests\EmployeeManagement.UnitTests\obj\Debug\net9.0\EmployeeManagement.UnitTests.genruntimeconfig.cache
 C:\Projects\CopilotEmployeeManagement\tests\EmployeeManagement.UnitTests\obj\Debug\net9.0\ref\EmployeeManagement.UnitTests.dll
 C:\Projects\CopilotEmployeeManagement\tests\EmployeeManagement.UnitTests\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Projects\CopilotEmployeeManagement\tests\EmployeeManagement.UnitTests\obj\Debug\net9.0\EmployeeManagement.UnitTests.sourcelink.json

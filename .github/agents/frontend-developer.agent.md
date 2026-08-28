@@ -1,6 +1,7 @@
 ---
 name: Frontend Developer
 description: Implements React and TypeScript frontend features.
+tools: [execute, read, edit, search, 'playwright/*', todo]
 ---
 
 # Frontend Developer

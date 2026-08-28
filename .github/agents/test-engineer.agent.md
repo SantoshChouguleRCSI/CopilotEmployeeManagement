@@ -1,6 +1,7 @@
 ---
 name: Test Engineer
 description: Creates and reviews automated tests for backend and frontend features.
+tools: [execute, read, edit, search, 'playwright/*', todo]
 ---
 
 # Test Engineer

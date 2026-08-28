@@ -1,6 +1,7 @@
 ---
 name: Backend Reviewer
 description: Reviews the .NET backend for architecture, code quality, security, and maintainability without modifying code.
+tools: [execute, read, search]
 ---
 
 # Backend Reviewer
