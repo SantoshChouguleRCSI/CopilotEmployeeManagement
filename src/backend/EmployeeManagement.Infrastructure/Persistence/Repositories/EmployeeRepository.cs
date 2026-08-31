@@ -19,7 +19,7 @@ internal sealed class EmployeeRepository : IEmployeeRepository
 
         if (!string.IsNullOrWhiteSpace(search))
         {
-            var term = search.Trim().ToLower();
+            var term = search.Trim().ToLowerInvariant();
             query = query.Where(e =>
                 e.FirstName.ToLower().Contains(term) ||
                 e.LastName.ToLower().Contains(term) ||

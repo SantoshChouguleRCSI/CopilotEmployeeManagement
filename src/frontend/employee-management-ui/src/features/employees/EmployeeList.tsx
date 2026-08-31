@@ -7,10 +7,7 @@ interface Props {
 }
 
 export function EmployeeList({ onEdit, onAdd }: Props) {
-  const { employees, loading, error, remove } = useEmployees();
-
-  if (loading) return <p>Loading employees...</p>;
-  if (error) return <p>Error: {error}</p>;
+  const { employees, loading, error, search, setSearch, remove } = useEmployees();
 
   return (
     <div>
@@ -18,30 +15,45 @@ export function EmployeeList({ onEdit, onAdd }: Props) {
         <h2>Employees</h2>
         <button type="button" onClick={onAdd}>Add Employee</button>
       </div>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Department</th>
-            <th>Job Title</th>
-            <th>Salary</th>
-            <th>Status</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {employees.map(emp => (
-            <EmployeeRow
-              key={emp.id}
-              employee={emp}
-              onEdit={onEdit}
-              onDelete={remove}
-            />
-          ))}
-        </tbody>
-      </table>
-      {employees.length === 0 && <p>No employees found.</p>}
+      <div style={{ marginBottom: '1rem' }}>
+        <input
+          type="search"
+          placeholder="Search by name or email..."
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          aria-label="Search employees"
+        />
+      </div>
+      {loading && <p>Loading employees...</p>}
+      {!loading && error && <p>Error: {error}</p>}
+      {!loading && !error && (
+        <>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Department</th>
+                <th>Job Title</th>
+                <th>Salary</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {employees.map(emp => (
+                <EmployeeRow
+                  key={emp.id}
+                  employee={emp}
+                  onEdit={onEdit}
+                  onDelete={remove}
+                />
+              ))}
+            </tbody>
+          </table>
+          {employees.length === 0 && <p>No employees found.</p>}
+        </>
+      )}
     </div>
   );
 }
