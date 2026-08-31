@@ -1,6 +1,6 @@
 import type { CreateEmployeeRequest, Employee, UpdateEmployeeRequest } from '../models/employee';
 
-const BASE_URL = 'http://localhost:5285/api/employees';
+const BASE_URL = 'https://localhost:7027/api/employees';
 
 async function handleResponse<T>(res: Response): Promise<T> {
   if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);

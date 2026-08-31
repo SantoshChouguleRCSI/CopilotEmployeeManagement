@@ -1,0 +1,12 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "type": "command",
+        "windows": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .github/hooks/pre-tool-safety.ps1",
+        "cwd": ".",
+        "timeout": 10
+      }
+    ]
+  }
+}

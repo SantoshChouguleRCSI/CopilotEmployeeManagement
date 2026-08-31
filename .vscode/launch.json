@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "API",
+      "type": "coreclr",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/backend/EmployeeManagement.Api/bin/Debug/net9.0/EmployeeManagement.Api.dll",
+      "cwd": "${workspaceFolder}/src/backend/EmployeeManagement.Api",
+      "preLaunchTask": "build-api"
+    },
+    {
+      "name": "Frontend",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev",
+      "cwd": "${workspaceFolder}/src/frontend/employee-management-ui"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Run Full Application",
+      "configurations": [
+        "API",
+        "Frontend"
+      ],
+      "stopAll": true
+    }
+  ]
+}

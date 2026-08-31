@@ -1,1 +1,9 @@
 [     282ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=5c264550:14335
+[  670645ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5173/@vite/client:1002
+[  700479ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=5c264550:14335
+[  703004ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5285/api/employees:0
+[  703297ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5285/api/employees:0
+[  839463ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5173/@vite/client:1002
+[  863075ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=5c264550:14335
+[  865438ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5285/api/employees:0
+[  865697ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5285/api/employees:0
