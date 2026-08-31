@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5VqoWqqsdRA=",
+  "dgSpecHash": "I3U9iiAn14c=",
   "success": true,
-  "projectFilePath": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Application\\EmployeeManagement.Application.csproj",
+  "projectFilePath": "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Application/EmployeeManagement.Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\santoshchougule\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.19\\microsoft.extensions.dependencyinjection.abstractions.9.0.19.nupkg.sha512"
+    "/home/runner/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.19/microsoft.extensions.dependencyinjection.abstractions.9.0.19.nupkg.sha512"
   ],
   "logs": []
 }

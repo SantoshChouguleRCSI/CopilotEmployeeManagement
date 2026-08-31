@@ -32,9 +32,9 @@ public sealed class EmployeeService : IEmployeeService
         return employee is null ? null : ToDto(employee);
     }
 
-    public async Task<IReadOnlyList<EmployeeDto>> GetAllAsync(CancellationToken cancellationToken = default)
+    public async Task<IReadOnlyList<EmployeeDto>> GetAllAsync(string? search = null, CancellationToken cancellationToken = default)
     {
-        var employees = await _repository.GetAllAsync(cancellationToken);
+        var employees = await _repository.GetAllAsync(search, cancellationToken);
         return employees.Select(ToDto).ToList();
     }
 

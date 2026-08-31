@@ -8,8 +8,9 @@ async function handleResponse<T>(res: Response): Promise<T> {
   return res.json() as Promise<T>;
 }
 
-export async function getEmployees(): Promise<Employee[]> {
-  const res = await fetch(BASE_URL);
+export async function getEmployees(search?: string): Promise<Employee[]> {
+  const url = search ? `${BASE_URL}?search=${encodeURIComponent(search)}` : BASE_URL;
+  const res = await fetch(url);
   return handleResponse<Employee[]>(res);
 }
 

@@ -15,4 +15,8 @@
     <ProjectReference Include="..\EmployeeManagement.Application\EmployeeManagement.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <InternalsVisibleTo Include="EmployeeManagement.UnitTests" />
+  </ItemGroup>
+
 </Project>

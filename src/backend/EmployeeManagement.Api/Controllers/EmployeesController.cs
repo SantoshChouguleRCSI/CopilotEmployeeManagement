@@ -16,9 +16,9 @@ public sealed class EmployeesController : ControllerBase
 
     [HttpGet]
     [ProducesResponseType<IReadOnlyList<EmployeeDto>>(StatusCodes.Status200OK)]
-    public async Task<IActionResult> GetAll(CancellationToken cancellationToken)
+    public async Task<IActionResult> GetAll([FromQuery] string? search, CancellationToken cancellationToken)
     {
-        var employees = await _service.GetAllAsync(cancellationToken);
+        var employees = await _service.GetAllAsync(search, cancellationToken);
         return Ok(employees);
     }
 
