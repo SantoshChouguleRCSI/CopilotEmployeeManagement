@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "20w71OSZ0ck=",
+  "dgSpecHash": "AdqfAavgPkE=",
   "success": true,
-  "projectFilePath": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Domain\\EmployeeManagement.Domain.csproj",
+  "projectFilePath": "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Domain/EmployeeManagement.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

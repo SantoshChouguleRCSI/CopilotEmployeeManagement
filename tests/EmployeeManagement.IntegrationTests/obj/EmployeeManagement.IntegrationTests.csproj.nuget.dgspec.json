@@ -1,26 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\CopilotEmployeeManagement\\tests\\EmployeeManagement.IntegrationTests\\EmployeeManagement.IntegrationTests.csproj": {}
+    "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/tests/EmployeeManagement.IntegrationTests/EmployeeManagement.IntegrationTests.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Api\\EmployeeManagement.Api.csproj": {
+    "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Api/EmployeeManagement.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Api\\EmployeeManagement.Api.csproj",
+        "projectUniqueName": "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Api/EmployeeManagement.Api.csproj",
         "projectName": "EmployeeManagement.Api",
-        "projectPath": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Api\\EmployeeManagement.Api.csproj",
-        "packagesPath": "C:\\Users\\santoshchougule\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Api\\obj\\",
+        "projectPath": "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Api/EmployeeManagement.Api.csproj",
+        "packagesPath": "/home/runner/.nuget/packages/",
+        "outputPath": "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Api/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Projects\\CopilotEmployeeManagement\\NuGet.Config",
-          "C:\\Users\\santoshchougule\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/nuget.config",
+          "/home/runner/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -33,11 +28,11 @@
             "framework": "net9.0",
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Application\\EmployeeManagement.Application.csproj": {
-                "projectPath": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Application\\EmployeeManagement.Application.csproj"
+              "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Application/EmployeeManagement.Application.csproj": {
+                "projectPath": "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Application/EmployeeManagement.Application.csproj"
               },
-              "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Infrastructure\\EmployeeManagement.Infrastructure.csproj": {
-                "projectPath": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Infrastructure\\EmployeeManagement.Infrastructure.csproj"
+              "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Infrastructure/EmployeeManagement.Infrastructure.csproj": {
+                "projectPath": "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Infrastructure/EmployeeManagement.Infrastructure.csproj"
               }
             }
           }
@@ -93,27 +88,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Application\\EmployeeManagement.Application.csproj": {
+    "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Application/EmployeeManagement.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Application\\EmployeeManagement.Application.csproj",
+        "projectUniqueName": "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Application/EmployeeManagement.Application.csproj",
         "projectName": "EmployeeManagement.Application",
-        "projectPath": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Application\\EmployeeManagement.Application.csproj",
-        "packagesPath": "C:\\Users\\santoshchougule\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Application\\obj\\",
+        "projectPath": "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Application/EmployeeManagement.Application.csproj",
+        "packagesPath": "/home/runner/.nuget/packages/",
+        "outputPath": "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Application/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Projects\\CopilotEmployeeManagement\\NuGet.Config",
-          "C:\\Users\\santoshchougule\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/nuget.config",
+          "/home/runner/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -126,8 +116,8 @@
             "framework": "net9.0",
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Domain\\EmployeeManagement.Domain.csproj": {
-                "projectPath": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Domain\\EmployeeManagement.Domain.csproj"
+              "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Domain/EmployeeManagement.Domain.csproj": {
+                "projectPath": "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Domain/EmployeeManagement.Domain.csproj"
               }
             }
           }
@@ -170,27 +160,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Domain\\EmployeeManagement.Domain.csproj": {
+    "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Domain/EmployeeManagement.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Domain\\EmployeeManagement.Domain.csproj",
+        "projectUniqueName": "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Domain/EmployeeManagement.Domain.csproj",
         "projectName": "EmployeeManagement.Domain",
-        "projectPath": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Domain\\EmployeeManagement.Domain.csproj",
-        "packagesPath": "C:\\Users\\santoshchougule\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Domain\\obj\\",
+        "projectPath": "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Domain/EmployeeManagement.Domain.csproj",
+        "packagesPath": "/home/runner/.nuget/packages/",
+        "outputPath": "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Domain/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Projects\\CopilotEmployeeManagement\\NuGet.Config",
-          "C:\\Users\\santoshchougule\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/nuget.config",
+          "/home/runner/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -237,27 +222,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Infrastructure\\EmployeeManagement.Infrastructure.csproj": {
+    "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Infrastructure/EmployeeManagement.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Infrastructure\\EmployeeManagement.Infrastructure.csproj",
+        "projectUniqueName": "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Infrastructure/EmployeeManagement.Infrastructure.csproj",
         "projectName": "EmployeeManagement.Infrastructure",
-        "projectPath": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Infrastructure\\EmployeeManagement.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\santoshchougule\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Infrastructure\\obj\\",
+        "projectPath": "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Infrastructure/EmployeeManagement.Infrastructure.csproj",
+        "packagesPath": "/home/runner/.nuget/packages/",
+        "outputPath": "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Infrastructure/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Projects\\CopilotEmployeeManagement\\NuGet.Config",
-          "C:\\Users\\santoshchougule\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/nuget.config",
+          "/home/runner/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -270,11 +250,11 @@
             "framework": "net9.0",
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Application\\EmployeeManagement.Application.csproj": {
-                "projectPath": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Application\\EmployeeManagement.Application.csproj"
+              "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Application/EmployeeManagement.Application.csproj": {
+                "projectPath": "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Application/EmployeeManagement.Application.csproj"
               },
-              "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Domain\\EmployeeManagement.Domain.csproj": {
-                "projectPath": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Domain\\EmployeeManagement.Domain.csproj"
+              "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Domain/EmployeeManagement.Domain.csproj": {
+                "projectPath": "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Domain/EmployeeManagement.Domain.csproj"
               }
             }
           }
@@ -317,27 +297,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Projects\\CopilotEmployeeManagement\\tests\\EmployeeManagement.IntegrationTests\\EmployeeManagement.IntegrationTests.csproj": {
+    "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/tests/EmployeeManagement.IntegrationTests/EmployeeManagement.IntegrationTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\CopilotEmployeeManagement\\tests\\EmployeeManagement.IntegrationTests\\EmployeeManagement.IntegrationTests.csproj",
+        "projectUniqueName": "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/tests/EmployeeManagement.IntegrationTests/EmployeeManagement.IntegrationTests.csproj",
         "projectName": "EmployeeManagement.IntegrationTests",
-        "projectPath": "C:\\Projects\\CopilotEmployeeManagement\\tests\\EmployeeManagement.IntegrationTests\\EmployeeManagement.IntegrationTests.csproj",
-        "packagesPath": "C:\\Users\\santoshchougule\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\CopilotEmployeeManagement\\tests\\EmployeeManagement.IntegrationTests\\obj\\",
+        "projectPath": "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/tests/EmployeeManagement.IntegrationTests/EmployeeManagement.IntegrationTests.csproj",
+        "packagesPath": "/home/runner/.nuget/packages/",
+        "outputPath": "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/tests/EmployeeManagement.IntegrationTests/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Projects\\CopilotEmployeeManagement\\NuGet.Config",
-          "C:\\Users\\santoshchougule\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/nuget.config",
+          "/home/runner/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -350,11 +325,11 @@
             "framework": "net9.0",
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Api\\EmployeeManagement.Api.csproj": {
-                "projectPath": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Api\\EmployeeManagement.Api.csproj"
+              "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Api/EmployeeManagement.Api.csproj": {
+                "projectPath": "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Api/EmployeeManagement.Api.csproj"
               },
-              "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Infrastructure\\EmployeeManagement.Infrastructure.csproj": {
-                "projectPath": "C:\\Projects\\CopilotEmployeeManagement\\src\\backend\\EmployeeManagement.Infrastructure\\EmployeeManagement.Infrastructure.csproj"
+              "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Infrastructure/EmployeeManagement.Infrastructure.csproj": {
+                "projectPath": "/home/runner/work/CopilotEmployeeManagement/CopilotEmployeeManagement/src/backend/EmployeeManagement.Infrastructure/EmployeeManagement.Infrastructure.csproj"
               }
             }
           }
@@ -409,7 +384,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
