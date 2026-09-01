@@ -1,4 +1,5 @@
 import { EmployeeRow } from './components/EmployeeRow';
+import { exportEmployeesCsv } from './exportEmployeesCsv';
 import { useEmployees } from './hooks/useEmployees';
 
 interface Props {
@@ -13,7 +14,16 @@ export function EmployeeList({ onEdit, onAdd }: Props) {
     <div>
       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
         <h2>Employees</h2>
-        <button type="button" onClick={onAdd}>Add Employee</button>
+        <div>
+          <button
+            type="button"
+            onClick={() => exportEmployeesCsv(employees)}
+            disabled={loading || error !== null || employees.length === 0}
+          >
+            Export Employees
+          </button>
+          <button type="button" onClick={onAdd}>Add Employee</button>
+        </div>
       </div>
       <div style={{ marginBottom: '1rem' }}>
         <input
