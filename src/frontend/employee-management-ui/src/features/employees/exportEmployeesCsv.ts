@@ -1,9 +1,14 @@
 import type { Employee } from '../../models/employee';
 
 const headers = ['Name', 'Email', 'Department', 'Job Title', 'Status'];
+const formulaPrefixes = new Set(['=', '+', '-', '@']);
 
 function escapeCsvValue(value: string): string {
-  const safeValue = /^[=+\-@]/.test(value) ? `'${value}` : value;
+  const firstSignificantCharacter = Array.from(value)
+    .find(character => (character.codePointAt(0) ?? 0) > 0x20);
+  const safeValue = firstSignificantCharacter && formulaPrefixes.has(firstSignificantCharacter)
+    ? `'${value}`
+    : value;
   return `"${safeValue.replaceAll('"', '""')}"`;
 }
 
