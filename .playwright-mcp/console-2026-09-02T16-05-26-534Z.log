@@ -1,0 +1,15 @@
+[     423ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=dceb2346:14335
+[    3873ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ https://localhost:7027/api/employees:0
+[    4138ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ https://localhost:7027/api/employees:0
+[   42394ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=dceb2346:14335
+[   45300ms] [ERROR] Access to fetch at 'https://localhost:7027/api/employees' from origin 'http://127.0.0.1:5173' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:5173/employees:0
+[   45301ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://localhost:7027/api/employees:0
+[   45374ms] [ERROR] Access to fetch at 'https://localhost:7027/api/employees' from origin 'http://127.0.0.1:5173' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:5173/employees:0
+[   45375ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://localhost:7027/api/employees:0
+[   85166ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=dceb2346:14335
+[   89143ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ https://localhost:7027/api/employees:0
+[   89410ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ https://localhost:7027/api/employees:0
+[  550392ms] [ERROR] [vite] SyntaxError: The requested module '/node_modules/.vite/deps/@mui_material.js?v=2f22c1dd' does not provide an export named 'ടെTextField' @ http://127.0.0.1:5173/@vite/client:532
+[  550396ms] [ERROR] [vite] Failed to reload /src/features/employees/EmployeeForm.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:5173/@vite/client:532
+[  556505ms] [ERROR] [vite] SyntaxError: The requested module '/node_modules/.vite/deps/@mui_material.js?v=2f22c1dd' does not provide an export named 'ടെTextField' @ http://127.0.0.1:5173/@vite/client:532
+[  556506ms] [ERROR] [vite] Failed to reload /src/features/employees/EmployeeForm.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:5173/@vite/client:532

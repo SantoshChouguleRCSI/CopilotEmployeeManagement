@@ -1,0 +1,48 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - paragraph [ref=e8]: Employee Management
+      - button "Notifications" [ref=e9] [cursor=pointer]
+      - generic [ref=e12]: SC
+      - paragraph [ref=e13]: Santosh Chougule
+  - generic [ref=e18]:
+    - list [ref=e19]:
+      - button "Employees" [ref=e20] [cursor=pointer]
+      - button "Departments" [ref=e26] [cursor=pointer]
+      - button "Reports" [ref=e32] [cursor=pointer]
+      - button "Export Data" [ref=e38] [cursor=pointer]
+      - button "Settings" [ref=e44] [cursor=pointer]
+    - generic [ref=e50]:
+      - generic [ref=e52]:
+        - button "Toggle color mode" [ref=e56] [cursor=pointer]
+        - generic [ref=e61]: Light
+      - separator [ref=e62]
+      - list [ref=e63]:
+        - button "Logout" [ref=e64] [cursor=pointer]
+  - main [ref=e70]:
+    - generic [ref=e71]:
+      - generic [ref=e72]:
+        - generic [ref=e73]:
+          - paragraph [ref=e74]: Employees
+          - paragraph [ref=e75]: Manage and view all employee information
+        - generic [ref=e76]:
+          - button "Export Employees" [disabled]
+          - button [ref=e77] [cursor=pointer]
+      - generic [ref=e81]:
+        - generic [ref=e82]:
+          - generic "Search employees" [ref=e83]:
+            - generic [ref=e84]:
+              - textbox "Search by name or email..." [ref=e88]
+              - group [aria-hidden]
+          - button [ref=e89] [cursor=pointer]
+        - progressbar [ref=e93]
+        - generic [ref=e95]:
+          - paragraph [ref=e96]:
+            - text: "Rows per page:"
+            - strong [ref=e97]: "10"
+          - generic [ref=e98]:
+            - paragraph [ref=e99]: 1-0 of 0
+            - button "Previous page" [disabled]
+            - generic [ref=e100]: "1"
+            - button "Next page" [disabled]
+    - paragraph [ref=e102]: © 2026 Employee Management System. All rights reserved.
