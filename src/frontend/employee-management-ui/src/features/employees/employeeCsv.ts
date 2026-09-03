@@ -23,7 +23,7 @@ export function downloadEmployeesCsv(employees: Employee[]): void {
   const url = URL.createObjectURL(new Blob([createEmployeesCsv(employees)], { type: 'text/csv;charset=utf-8' }));
   const link = document.createElement('a');
   link.href = url;
-  link.download = 'employees.csv';
+  link.download = `employees-${new Date().toISOString().slice(0, 10)}.csv`;
   link.click();
   URL.revokeObjectURL(url);
 }
