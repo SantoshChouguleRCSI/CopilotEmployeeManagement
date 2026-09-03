@@ -15,7 +15,6 @@ import {
   Tooltip, Typography, createTheme,
 } from '@mui/material';
 import type { Employee } from '../../models/employee';
-import { exportEmployeesCsv } from './exportEmployeesCsv';
 import { useEmployees } from './hooks/useEmployees';
 
 interface Props {
@@ -112,7 +111,7 @@ export function EmployeeList({ onEdit, onAdd }: Props) {
           <Box sx={{ maxWidth: 920, mx: 'auto', width: '100%', px: { xs: 2, sm: 4 }, py: { xs: 3, sm: 5 } }}>
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2.5} sx={{ alignItems: { xs: 'flex-start', sm: 'center' }, justifyContent: 'space-between', mb: 4 }}>
               <Box><Typography color="text.primary" sx={{ fontSize: 27, fontWeight: 700 }}>Employees</Typography><Typography color="text.secondary" sx={{ mt: 0.25, fontSize: 13 }}>Manage and view all employee information</Typography></Box>
-              <Stack direction="row" spacing={1.25}><Button disabled={loading || !!error || employees.length === 0} onClick={() => exportEmployeesCsv(employees)} startIcon={<DownloadOutlined />} variant="outlined">Export Employees</Button><Button onClick={onAdd} startIcon={<Add />} variant="contained">Add Employee</Button></Stack>
+              <Stack direction="row" spacing={1.25}><Button onClick={onAdd} startIcon={<Add />} variant="contained">Add Employee</Button></Stack>
             </Stack>
             <Paper elevation={0} sx={{ overflow: 'hidden', border: 1, borderColor: 'divider', boxShadow: '0 3px 8px rgba(15, 23, 42, 0.06)' }}>
               <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1.5} sx={{ alignItems: { xs: 'stretch', sm: 'center' }, justifyContent: 'space-between', p: 1.75, borderBottom: 1, borderColor: 'divider' }}>
