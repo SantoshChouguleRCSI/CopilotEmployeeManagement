@@ -15,12 +15,15 @@ import {
   Tooltip, Typography, createTheme,
 } from '@mui/material';
 import type { Employee } from '../../models/employee';
+import { downloadEmployeesCsv } from './employeeCsv';
 import { useEmployees } from './hooks/useEmployees';
 
 interface Props {
   onEdit: (id: string) => void;
   onAdd: () => void;
 }
+
+type StatusFilter = 'all' | 'active' | 'inactive';
 
 const navigationItems = [
   { label: 'Employees', icon: <PeopleAltOutlined />, selected: true, to: '/employees' },
@@ -39,8 +42,10 @@ export function EmployeeList({ onEdit, onAdd }: Props) {
   const [darkMode, setDarkMode] = useState(false);
   const [mobileNavigationOpen, setMobileNavigationOpen] = useState(false);
   const [filterAnchor, setFilterAnchor] = useState<HTMLElement | null>(null);
+  const [statusFilter, setStatusFilter] = useState<StatusFilter>('all');
   const [employeeToDelete, setEmployeeToDelete] = useState<Employee | null>(null);
   const [deleting, setDeleting] = useState(false);
+  const displayedEmployees = employees.filter(employee => statusFilter === 'all' || employee.isActive === (statusFilter === 'active'));
   const theme = createTheme({
     palette: {
       mode: darkMode ? 'dark' : 'light',
@@ -89,6 +94,11 @@ export function EmployeeList({ onEdit, onAdd }: Props) {
     }
   };
 
+  const selectStatusFilter = (filter: StatusFilter) => {
+    setStatusFilter(filter);
+    setFilterAnchor(null);
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -116,15 +126,18 @@ export function EmployeeList({ onEdit, onAdd }: Props) {
             <Paper elevation={0} sx={{ overflow: 'hidden', border: 1, borderColor: 'divider', boxShadow: '0 3px 8px rgba(15, 23, 42, 0.06)' }}>
               <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1.5} sx={{ alignItems: { xs: 'stretch', sm: 'center' }, justifyContent: 'space-between', p: 1.75, borderBottom: 1, borderColor: 'divider' }}>
                 <TextField aria-label="Search employees" onChange={event => setSearch(event.target.value)} placeholder="Search by name or email..." size="small" slotProps={{ input: { startAdornment: <InputAdornment position="start"><Search fontSize="small" /></InputAdornment> } }} value={search} sx={{ width: { xs: '100%', sm: 330 }, '& .MuiOutlinedInput-root': { bgcolor: 'background.paper' } }} />
-                <Button aria-controls={filterAnchor ? 'filter-menu' : undefined} aria-expanded={Boolean(filterAnchor)} onClick={event => setFilterAnchor(event.currentTarget)} startIcon={<FilterList />} variant="outlined">Filter</Button>
-                <Menu anchorEl={filterAnchor} id="filter-menu" onClose={() => setFilterAnchor(null)} open={Boolean(filterAnchor)}><MenuItem onClick={() => setFilterAnchor(null)}>All employees</MenuItem><MenuItem onClick={() => setFilterAnchor(null)}>Active employees</MenuItem><MenuItem onClick={() => setFilterAnchor(null)}>Inactive employees</MenuItem></Menu>
+                <Stack direction="row" spacing={1}>
+                  <Button aria-controls={filterAnchor ? 'filter-menu' : undefined} aria-expanded={Boolean(filterAnchor)} onClick={event => setFilterAnchor(event.currentTarget)} startIcon={<FilterList />} variant="outlined">Filter</Button>
+                  <Button disabled={loading || displayedEmployees.length === 0} onClick={() => downloadEmployeesCsv(displayedEmployees)} startIcon={<FileDownloadOutlined />} variant="outlined">Export Employees</Button>
+                  <Menu anchorEl={filterAnchor} id="filter-menu" onClose={() => setFilterAnchor(null)} open={Boolean(filterAnchor)}><MenuItem onClick={() => selectStatusFilter('all')}>All employees</MenuItem><MenuItem onClick={() => selectStatusFilter('active')}>Active employees</MenuItem><MenuItem onClick={() => selectStatusFilter('inactive')}>Inactive employees</MenuItem></Menu>
+                </Stack>
               </Stack>
               {loading && <LinearProgress />}
               {error && <Alert severity="error" sx={{ m: 2 }}>{error}</Alert>}
               {!loading && !error && (
-                <TableContainer><Table aria-label="Employee directory" sx={{ minWidth: 740 }}><TableHead><TableRow sx={{ '& .MuiTableCell-root': { bgcolor: 'action.hover', borderColor: 'divider', color: 'text.secondary', fontSize: 12, fontWeight: 800, py: 1.75 } }}><TableCell>Name <Sort sx={{ verticalAlign: 'middle', fontSize: 15 }} /></TableCell><TableCell>Department</TableCell><TableCell>Job Title</TableCell><TableCell>Salary</TableCell><TableCell>Status</TableCell><TableCell align="center">Actions</TableCell></TableRow></TableHead><TableBody>{employees.map(employee => <TableRow hover key={employee.id} sx={{ '& .MuiTableCell-root': { borderColor: 'divider', py: 1.75 } }}><TableCell><Stack direction="row" spacing={1.25} sx={{ alignItems: 'center' }}><Avatar sx={{ bgcolor: '#4f70db', height: 35, width: 35, fontSize: 12, fontWeight: 700 }}>{employeeInitials(employee)}</Avatar><Box><Typography color="text.primary" sx={{ fontSize: 13, fontWeight: 800 }}>{employee.firstName} {employee.lastName}</Typography><Typography color="text.secondary" sx={{ fontSize: 11 }}>{employee.email}</Typography></Box></Stack></TableCell><TableCell sx={{ fontSize: 12 }}>{employee.department}</TableCell><TableCell sx={{ fontSize: 12 }}>{employee.jobTitle}</TableCell><TableCell sx={{ fontSize: 12 }}>${employee.salary.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</TableCell><TableCell><Chip color={employee.isActive ? 'success' : 'default'} label={employee.isActive ? 'Active' : 'Inactive'} size="small" sx={{ fontSize: 11, height: 23 }} /></TableCell><TableCell align="center"><Tooltip title="Edit employee"><IconButton aria-label={`Edit ${employee.firstName} ${employee.lastName}`} onClick={() => onEdit(employee.id)} size="small"><EditOutlined fontSize="small" /></IconButton></Tooltip><Tooltip title="Delete employee"><IconButton aria-label={`Delete ${employee.firstName} ${employee.lastName}`} color="error" onClick={() => setEmployeeToDelete(employee)} size="small"><DeleteOutlined fontSize="small" /></IconButton></Tooltip></TableCell></TableRow>)}</TableBody></Table>{employees.length === 0 && <Typography color="text.secondary" sx={{ px: 2, py: 4, textAlign: 'center' }}>No employees found.</Typography>}</TableContainer>
+                <TableContainer><Table aria-label="Employee directory" sx={{ minWidth: 740 }}><TableHead><TableRow sx={{ '& .MuiTableCell-root': { bgcolor: 'action.hover', borderColor: 'divider', color: 'text.secondary', fontSize: 12, fontWeight: 800, py: 1.75 } }}><TableCell>Name <Sort sx={{ verticalAlign: 'middle', fontSize: 15 }} /></TableCell><TableCell>Department</TableCell><TableCell>Job Title</TableCell><TableCell>Salary</TableCell><TableCell>Status</TableCell><TableCell align="center">Actions</TableCell></TableRow></TableHead><TableBody>{displayedEmployees.map(employee => <TableRow hover key={employee.id} sx={{ '& .MuiTableCell-root': { borderColor: 'divider', py: 1.75 } }}><TableCell><Stack direction="row" spacing={1.25} sx={{ alignItems: 'center' }}><Avatar sx={{ bgcolor: '#4f70db', height: 35, width: 35, fontSize: 12, fontWeight: 700 }}>{employeeInitials(employee)}</Avatar><Box><Typography color="text.primary" sx={{ fontSize: 13, fontWeight: 800 }}>{employee.firstName} {employee.lastName}</Typography><Typography color="text.secondary" sx={{ fontSize: 11 }}>{employee.email}</Typography></Box></Stack></TableCell><TableCell sx={{ fontSize: 12 }}>{employee.department}</TableCell><TableCell sx={{ fontSize: 12 }}>{employee.jobTitle}</TableCell><TableCell sx={{ fontSize: 12 }}>${employee.salary.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</TableCell><TableCell><Chip color={employee.isActive ? 'success' : 'default'} label={employee.isActive ? 'Active' : 'Inactive'} size="small" sx={{ fontSize: 11, height: 23 }} /></TableCell><TableCell align="center"><Tooltip title="Edit employee"><IconButton aria-label={`Edit ${employee.firstName} ${employee.lastName}`} onClick={() => onEdit(employee.id)} size="small"><EditOutlined fontSize="small" /></IconButton></Tooltip><Tooltip title="Delete employee"><IconButton aria-label={`Delete ${employee.firstName} ${employee.lastName}`} color="error" onClick={() => setEmployeeToDelete(employee)} size="small"><DeleteOutlined fontSize="small" /></IconButton></Tooltip></TableCell></TableRow>)}</TableBody></Table>{displayedEmployees.length === 0 && <Typography color="text.secondary" sx={{ px: 2, py: 4, textAlign: 'center' }}>No employees found.</Typography>}</TableContainer>
               )}
-              <Stack direction="row" sx={{ alignItems: 'center', justifyContent: 'space-between', borderTop: 1, borderColor: 'divider', px: 2, py: 1.25 }}><Typography color="text.secondary" sx={{ fontSize: 12 }}>Rows per page: <strong>10</strong></Typography><Stack direction="row" spacing={1.25} sx={{ alignItems: 'center' }}><Typography color="text.secondary" sx={{ fontSize: 12 }}>1-{employees.length} of {employees.length}</Typography><IconButton aria-label="Previous page" disabled size="small"><ArrowBackIosNew fontSize="inherit" /></IconButton><Chip color="primary" label="1" size="small" /><IconButton aria-label="Next page" disabled size="small"><ArrowForwardIos fontSize="inherit" /></IconButton></Stack></Stack>
+              <Stack direction="row" sx={{ alignItems: 'center', justifyContent: 'space-between', borderTop: 1, borderColor: 'divider', px: 2, py: 1.25 }}><Typography color="text.secondary" sx={{ fontSize: 12 }}>Rows per page: <strong>10</strong></Typography><Stack direction="row" spacing={1.25} sx={{ alignItems: 'center' }}><Typography color="text.secondary" sx={{ fontSize: 12 }}>1-{displayedEmployees.length} of {displayedEmployees.length}</Typography><IconButton aria-label="Previous page" disabled size="small"><ArrowBackIosNew fontSize="inherit" /></IconButton><Chip color="primary" label="1" size="small" /><IconButton aria-label="Next page" disabled size="small"><ArrowForwardIos fontSize="inherit" /></IconButton></Stack></Stack>
             </Paper>
             <Dialog aria-labelledby="delete-employee-title" onClose={deleting ? undefined : () => setEmployeeToDelete(null)} open={employeeToDelete !== null}>
               <DialogTitle id="delete-employee-title">Delete Employee</DialogTitle>
