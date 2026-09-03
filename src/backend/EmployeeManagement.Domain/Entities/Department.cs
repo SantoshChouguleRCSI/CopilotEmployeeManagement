@@ -15,6 +15,8 @@ public sealed class Department
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(name);
 
+        name = name.Trim();
+
         var now = DateTime.UtcNow;
 
         return new Department
@@ -31,7 +33,7 @@ public sealed class Department
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(name);
 
-        Name = name;
+        Name = name.Trim();
         Description = description ?? string.Empty;
         UpdatedAt = DateTime.UtcNow;
     }

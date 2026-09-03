@@ -16,6 +16,16 @@ internal sealed class DepartmentRepository : IDepartmentRepository
     public async Task<IReadOnlyList<Department>> GetAllAsync(CancellationToken cancellationToken = default)
         => await _context.Departments.ToListAsync(cancellationToken);
 
+    public Task<bool> ExistsWithNameAsync(string name, Guid? excludingId = null, CancellationToken cancellationToken = default)
+    {
+        var normalizedName = name.Trim().ToUpperInvariant();
+
+        return _context.Departments.AnyAsync(
+            department => department.Name.ToUpper() == normalizedName &&
+                (!excludingId.HasValue || department.Id != excludingId.Value),
+            cancellationToken);
+    }
+
     public async Task AddAsync(Department department, CancellationToken cancellationToken = default)
     {
         await _context.Departments.AddAsync(department, cancellationToken);

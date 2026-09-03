@@ -13,6 +13,8 @@ public sealed class DepartmentService : IDepartmentService
 
     public async Task<DepartmentDto> CreateAsync(CreateDepartmentRequest request, CancellationToken cancellationToken = default)
     {
+        await EnsureNameIsUniqueAsync(request.Name, cancellationToken: cancellationToken);
+
         var department = Department.Create(request.Name, request.Description);
         await _repository.AddAsync(department, cancellationToken);
         return ToDto(department);
@@ -35,6 +37,8 @@ public sealed class DepartmentService : IDepartmentService
         var department = await _repository.GetByIdAsync(id, cancellationToken)
             ?? throw new KeyNotFoundException($"Department {id} not found.");
 
+        await EnsureNameIsUniqueAsync(request.Name, id, cancellationToken);
+
         department.Update(request.Name, request.Description);
         await _repository.UpdateAsync(department, cancellationToken);
         return ToDto(department);
@@ -46,6 +50,12 @@ public sealed class DepartmentService : IDepartmentService
             ?? throw new KeyNotFoundException($"Department {id} not found.");
 
         await _repository.DeleteAsync(department.Id, cancellationToken);
+    }
+
+    private async Task EnsureNameIsUniqueAsync(string name, Guid? excludingId = null, CancellationToken cancellationToken = default)
+    {
+        if (await _repository.ExistsWithNameAsync(name, excludingId, cancellationToken))
+            throw new ArgumentException("A department with this name already exists.", nameof(name));
     }
 
     private static DepartmentDto ToDto(Department d) => new(

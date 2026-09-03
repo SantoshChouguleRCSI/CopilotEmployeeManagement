@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import {
   Add, Apartment, ArrowBackIosNew, ArrowForwardIos, Brightness4, Brightness7,
   DeleteOutlined, DownloadOutlined, EditOutlined, FileDownloadOutlined, FilterList,
@@ -23,8 +24,8 @@ interface Props {
 }
 
 const navigationItems = [
-  { label: 'Employees', icon: <PeopleAltOutlined />, selected: true },
-  { label: 'Departments', icon: <Apartment /> },
+  { label: 'Employees', icon: <PeopleAltOutlined />, selected: true, to: '/employees' },
+  { label: 'Departments', icon: <Apartment />, to: '/departments' },
   { label: 'Reports', icon: <ShowChartOutlined /> },
   { label: 'Export Data', icon: <FileDownloadOutlined /> },
   { label: 'Settings', icon: <SettingsOutlined /> },
@@ -54,7 +55,7 @@ export function EmployeeList({ onEdit, onAdd }: Props) {
     <Box sx={{ display: 'flex', height: '100%', flexDirection: 'column', p: 1.5 }}>
       <List disablePadding sx={{ display: 'grid', gap: 0.5 }}>
         {navigationItems.map(item => (
-          <ListItemButton key={item.label} selected={item.selected} sx={{ borderRadius: 1, minHeight: 42, '&.Mui-selected': { bgcolor: '#eaf1ff', color: 'primary.main' } }}>
+          <ListItemButton component={item.to ? RouterLink : 'button'} key={item.label} selected={item.selected} sx={{ borderRadius: 1, minHeight: 42, '&.Mui-selected': { bgcolor: '#eaf1ff', color: 'primary.main' } }} to={item.to}>
             <ListItemIcon sx={{ minWidth: 34, color: 'inherit' }}>{item.icon}</ListItemIcon>
             <ListItemText primary={item.label} slotProps={{ primary: { sx: { fontSize: 13, fontWeight: item.selected ? 700 : 600 } } }} />
           </ListItemButton>
