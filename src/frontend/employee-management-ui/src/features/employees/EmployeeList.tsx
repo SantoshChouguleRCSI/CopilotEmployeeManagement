@@ -128,7 +128,7 @@ export function EmployeeList({ onEdit, onAdd }: Props) {
                 <TextField aria-label="Search employees" onChange={event => setSearch(event.target.value)} placeholder="Search by name or email..." size="small" slotProps={{ input: { startAdornment: <InputAdornment position="start"><Search fontSize="small" /></InputAdornment> } }} value={search} sx={{ width: { xs: '100%', sm: 330 }, '& .MuiOutlinedInput-root': { bgcolor: 'background.paper' } }} />
                 <Stack direction="row" spacing={1}>
                   <Button aria-controls={filterAnchor ? 'filter-menu' : undefined} aria-expanded={Boolean(filterAnchor)} onClick={event => setFilterAnchor(event.currentTarget)} startIcon={<FilterList />} variant="outlined">Filter</Button>
-                  <Button disabled={loading || displayedEmployees.length === 0} onClick={() => downloadEmployeesCsv(displayedEmployees)} startIcon={<FileDownloadOutlined />} variant="outlined">Export Employees</Button>
+                  <Button disabled={loading || error !== null || displayedEmployees.length === 0} onClick={() => downloadEmployeesCsv(displayedEmployees)} startIcon={<FileDownloadOutlined />} variant="outlined">Export Employees</Button>
                   <Menu anchorEl={filterAnchor} id="filter-menu" onClose={() => setFilterAnchor(null)} open={Boolean(filterAnchor)}><MenuItem onClick={() => selectStatusFilter('all')}>All employees</MenuItem><MenuItem onClick={() => selectStatusFilter('active')}>Active employees</MenuItem><MenuItem onClick={() => selectStatusFilter('inactive')}>Inactive employees</MenuItem></Menu>
                 </Stack>
               </Stack>

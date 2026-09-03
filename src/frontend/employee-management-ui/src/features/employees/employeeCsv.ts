@@ -3,7 +3,8 @@ import type { Employee } from '../../models/employee';
 const headers = ['Name', 'Email', 'Department', 'Job Title', 'Status'];
 
 function escapeCsvValue(value: string): string {
-  return `"${value.replaceAll('"', '""')}"`;
+  const safeValue = /^[=+\-@]/.test(value) ? `'${value}` : value;
+  return `"${safeValue.replaceAll('"', '""')}"`;
 }
 
 export function createEmployeesCsv(employees: Employee[]): string {
